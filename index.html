@@ -15,17 +15,52 @@
           <img id="logo"  class="text-center rounded mx-auto d-block" src="logo1.jpg" alt="">
           <h1 class="text-center">Welcome To SM-Bank Ltd.</h1>
           <h2>Login</h2>
-          <input type="text" class="form-control" placeholder="Email">
-          <br>
-          <input type="password"  class="form-control" placeholder="Password">
-          <br>
-          <button id="login" class="btn btn-success">Enter</button>
+          
+               <input id="email" type="email" class="form-control" name="email" placeholder="Email">
+               <br>
+               <input id="password" type="password"  class="form-control" placeholder="Password">
+               <br>
+               <input id="login" type="submit" value="Login" class="btn btn-success">
+               <button id="createAccount" class="btn btn-success"><a href="signUp.html">Create New Account</a> </button>
+
+          
+
+
      </div>
 
     </div>
+    <!--Start SingUp Section-->
+    <!-- <div id="signup-area-1" class="signup-area">
+     <section class="signuppage">
+          <div class="title">
+               <h2>Sign Up</h2>
+               <p>For Best Performance</p>
+          </div>
+          <div class="row name">
+               <input class="firtname" type="text" placeholder="FirstName">
+               <input class="lastname" type="text" placeholder="LastName">
+          </div>
+          <div class="security-info">
+               <input class="row" type="date" name="date of birth" id="birth-date">
+               <input id="m-number" class="row" type="text" placeholder="Enter your mobile number">
+               <input class="row" type="text" placeholder="New Password" id="password">
+               
+          </div>
+          <div class="signup">
+               <button id="signup-btn" class="btn btn-success">Sign Up</button>
+     
+          </div>
+     
+         </section>
+    </div>
+     -->
+    <!--End SingUp Section-->
     <!--Start Transaction Area-->
     
      <div id="transaction-area">
+          <div class="top-nav row">
+               <button id="logout" class="btn ">Logout</button>
+          </div>
           <div class="row">
                <div class="col-md-4">
                     <div class="deposit status">
@@ -70,109 +105,6 @@
     
      <!--End Transaction Area-->
      <script src="main.js"></script>
-    <script>
-    
-//     //login Button event handler section
-//       const loginBtn=document.getElementById('login');
-//       loginBtn.addEventListener('click', function(){
-//           const loginArea=document.getElementById('login-area');
-//           loginArea.style.display='none';
-//           const transactionArea=document.getElementById('transaction-area');
-//           transactionArea.style.display='block';
-//       })
-
-//     //login pages logo resizing section
-//                const logoMoving=document.getElementById('logo');
-//                logoMoving.addEventListener('click', function(){
-                    
-//                     logoMoving.style.width='150px';
-//                     logoMoving.style.height='100px'
-//                })
-//    //deposit button event handler section
-//                const depositBtn=document.getElementById('deposit');
-//                depositBtn.addEventListener('click', function(){
-//                     const depositNumber=getInputNumber("depositAmount");
-//                     //Minimize 2 lines below using function//
-//                // const depositAmount=document.getElementById('depositAmount').value;
-//                // const depositNumber=parseFloat(depositAmount);
-//                     if(depositNumber < 0){
-//                          alert("Deposit Number cannot be Negative");
-//                     }
-//                     else{
-                         
-//                updateSpanText('currentDeposit', depositNumber);
-//                updateSpanText('currentBalance', depositNumber);
-//                                    /////This section minimize by function/////
-//                // const currentDeposit=document.getElementById('currentDeposit').innerText;
-//                // const currentDepositNumber=parseFloat(currentDeposit);
-//                // const totalDeposit=currentDepositNumber+depositNumber;
-//                // document.getElementById('currentDeposit').innerText=totalDeposit;
-
-//                // const currentBalance=document.getElementById('currentBalance').innerText;
-//                // const currentBalanceNum=parseFloat(currentBalance);
-//                // const totalBalance=currentBalanceNum+depositNumber;
-//                // document.getElementById('currentBalance').innerText=totalBalance;
-
-//                document.getElementById('depositAmount').value="0";
-//                     }
-
-              
-
-//            })
-//             //Withdraw Section Start from here
-//            const withdrawBtn=document.getElementById('withdraw');
-//                     withdrawBtn.addEventListener('click', function(){
-
-//                          const withdrawNumber=getInputNumber("withdrawAmount");
-
-//                        if(withdrawNumber < 0){
-//                          alert("Withdraw number cannot be Negative");
-//                        }
-//                        else{
-//                          updateSpanText('currentWithdraw', withdrawNumber);
-//                          updateAfterWithdrawBalance('currentBalance', withdrawNumber);
-//                                    //Minimize 2 lines below using function//
-//                          // const withdrawAmount=document.getElementById('withdrawAmount').value;
-//                          // const withdrawAmountNumber=parseInt(withdrawAmount);
-//                          document.getElementById('withdrawAmount').value="0";
-//                        }
-                         
-//                     })
-                   
-
-
-
-//            //Function for GetInput Transaction//
-//            function getInputNumber(id){
-//                const amount=document.getElementById(id).value;
-//                const amountNumber=parseFloat(amount);
-//                return amountNumber;
-//            }
-
-//            // Function for Deposit Transaction//
-//            function updateSpanText(id, newNumber){
-//                const current=document.getElementById(id).innerText;
-//                const  currentNumber=parseFloat(current);
-//                const totalAmount=currentNumber+newNumber;
-//                document.getElementById(id).innerText=totalAmount;
-//            }
-//            //After withdraw Total Balance
-
-//            function updateAfterWithdrawBalance(id, newNumber){
-//                const current=document.getElementById(id).innerText;
-//                const  currentNumber=parseFloat(current);
-//                const totalAmount=currentNumber-newNumber;
-//                document.getElementById(id).innerText=totalAmount;
-//            }
-
-
-
-
-    </script>
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>

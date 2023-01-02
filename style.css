@@ -1,6 +1,6 @@
 body{
      background-color: rgb(145, 221, 195) !important;
-     padding: 100px;
+     padding: 10px;
      
 }
 .submit-area{
@@ -40,4 +40,54 @@ body{
 .status h2{
      font-weight: 700;
      font-size: 50px;
+}
+.top-nav{
+     padding-bottom: 80px;
+     padding-top: 0px;
+     
+}
+.top-nav button{
+     padding-right: 40px;
+     width: 80px;
+     margin-left: auto;
+     margin-right: 20px;
+     
+}
+
+.signuppage {
+     
+     height: auto;
+     width: 100%;
+    
+     
+}
+.signuppage input{
+     margin-top: 10px;
+     padding: 10px;
+     width: 100%;
+}
+.signuppage .name input{
+     width: 47% !important;
+    
+}
+.lastname{
+     margin-left: 2%;
+}
+.signup-area{
+     background: bisque;
+     width: 50%;
+     padding: 50px;
+     margin: auto;
+}
+
+.signuppage button{
+     margin-top: 20px;
+}
+#createAccount a{
+     color: black;
+     text-decoration: none;
+}
+#createAccount{
+   margin-left: 240px;
+     
 }

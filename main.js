@@ -2,10 +2,18 @@
     //login Button event handler section
     const loginBtn=document.getElementById('login');
     loginBtn.addEventListener('click', function(){
-        const loginArea=document.getElementById('login-area');
-        loginArea.style.display='none';
-        const transactionArea=document.getElementById('transaction-area');
-        transactionArea.style.display='block';
+        const mail = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        if(mail === "" || password === ""){
+            alert("UserName or Password is incorrect!");
+        }
+         else{
+            const loginArea=document.getElementById('login-area');
+            loginArea.style.display='none';
+            const transactionArea=document.getElementById('transaction-area');
+            transactionArea.style.display='block';
+        }
+        
     })
 
   //login pages logo resizing section
@@ -19,7 +27,7 @@
              const depositBtn=document.getElementById('deposit');
              depositBtn.addEventListener('click', function(){
                   const depositNumber=getInputNumber("depositAmount");
-                  //Minimize 2 lines below using function//
+             //Minimize 2 lines below using function//
              // const depositAmount=document.getElementById('depositAmount').value;
              // const depositNumber=parseFloat(depositAmount);
                   if(depositNumber < 0){
@@ -91,5 +99,27 @@
              const totalAmount=currentNumber-newNumber;
              document.getElementById(id).innerText=totalAmount;
          }
+
+
+//logout Section
+
+const logOut = document.getElementById("logout");
+logOut.addEventListener('click', function(id){
+    console.log("Someone clicked me");
+            const loginArea=document.getElementById('login-area');
+            loginArea.style.display='block';
+            const transactionArea=document.getElementById('transaction-area');
+            transactionArea.style.display='none';
+    
+});
+const createAcct = document.getElementById("createAccount");
+createAcct.addEventListener('click', function(){
+    console.log("Someone clicked me");
+    const loginArea=document.getElementById('login-area');
+    loginArea.style.display='none';
+    const signupArea=document.getElementById('signup-area-1');
+    signupArea.style.display='block';
+    
+});
 
 
