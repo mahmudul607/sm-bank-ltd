@@ -10,34 +10,38 @@
 </head>
 <body>
     <!--Start SingUp Section-->
-   
-        <div id="signup-area-1" class="signup-area">
-            <section class="signuppage">
-                 <div class="title">
-                      <h2>Sign Up</h2>
-                      <p>For Best Performance</p>
-                 </div>
-                 <div class="row name">
-                      <input class="firtname" type="text" placeholder="FirstName">
-                      <input class="lastname" type="text" placeholder="LastName">
-                 </div>
-                 <div class="security-info">
-                      <input class="row" type="date" name="date of birth" id="birth-date">
-                      <input id="m-number" class="row" type="text" placeholder="Enter your mobile number">
-                      <input class="row" type="text" placeholder="New Password" id="password">
-                      
-                 </div>
-                 <div class="signup">
-                      <input type="submit" value="Sign Up" name="submit" id="signup-btn" class="btn btn-success">
-                      
-            
-                 </div>
-            
-                </section>
-           </div>
+   <form id="accountDataForm">
+     <div id="signup-area-1" class="signup-area">
+          <section class="signuppage">
+               <div class="title">
+                    <h2>Sign Up</h2>
+                    <p>For Best Performance</p>
+               </div>
+               <div class="row name">
+                    <label for="firstname">First Name</label>
+                    <input id="firstN" class="firtname" type="text" placeholder="FirstName">
+                    <label for="lastname">Last Name</label>
+                    <input id="lastN" class=" lastname" type="text" placeholder="LastName">
+               </div>
+               <div class="security-info">
+                    <label for="dateOfBirth">Date of Birth:</label>
+                    <input class="row" type="date" name="date of birth" id="birth-date">
+                    <label for="mobileNumber">Mobile Number:</label>
+                    <input id="m-number" class="row" type="text" placeholder="Enter your mobile number">
+                    <label for="passwrd">Password:</label>
+                    <input class="row" type="text" placeholder="New Password" id="n-password">
+                    
+               </div>
+               <div class="signup">
+                    <input type="submit" value="Sign Up" name="submit" id="signup-btn" class="btn btn-success">
+                    <button type="button" value="Already Have An Account" class="btn" id="pre-account"><a id="link" href="index.html">Already Have An Account</a></button>
+               </div>
+          
+              </section>
+         </div>
+   </form>
+     
            
-    
-    
        <!--End SingUp Section-->
 
        <script src="main.js"></script>

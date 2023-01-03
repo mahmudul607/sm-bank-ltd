@@ -61,13 +61,26 @@ body{
     
      
 }
+.signuppage label{
+     padding-top: 6px;
+     color: gray;
+     font-weight: 700;
+}
 .signuppage input{
      margin-top: 10px;
      padding: 10px;
      width: 100%;
 }
+.signuppage .name{
+     display: flex;
+     flex-direction: row !important;
+}
+.signuppage .name label{
+     width: 12% !important;
+     
+}
 .signuppage .name input{
-     width: 47% !important;
+     width: 35% !important;
     
 }
 .lastname{
@@ -83,11 +96,23 @@ body{
 .signuppage button{
      margin-top: 20px;
 }
-#createAccount a{
+#link{
      color: black;
      text-decoration: none;
 }
 #createAccount{
    margin-left: 240px;
+     
+}
+.signup{
+     width: 80px;
+     margin: auto;
+     padding: auto;
+}
+#pre-account{
+     width: 200px !important;
+     margin-left: -60px !important;
+     background-color: gray !important;
+     
      
 }

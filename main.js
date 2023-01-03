@@ -1,7 +1,7 @@
  
     //login Button event handler section
     const loginBtn=document.getElementById('login');
-    loginBtn.addEventListener('click', function(){
+    loginBtn.addEventListener("click", function(){
         const mail = document.getElementById("email").value;
         const password = document.getElementById("password").value;
         if(mail === "" || password === ""){
@@ -26,12 +26,13 @@
  //deposit button event handler section
              const depositBtn=document.getElementById('deposit');
              depositBtn.addEventListener('click', function(){
-                  const depositNumber=getInputNumber("depositAmount");
+                //   const depositNumber=getInputNumber('depositAmount');
              //Minimize 2 lines below using function//
-             // const depositAmount=document.getElementById('depositAmount').value;
-             // const depositNumber=parseFloat(depositAmount);
-                  if(depositNumber < 0){
-                       alert("Deposit Number cannot be Negative");
+             const depositAmount=document.getElementById('depositAmount').value;
+             const depositNumber=parseFloat(depositAmount);
+                     
+                  if(depositNumber < 0 || depositAmount === ""){
+                       alert("Deposit Number cannot be Negative or Empty");
                   }
                   else{
                        
@@ -56,12 +57,14 @@
          })
           //Withdraw Section Start from here
          const withdrawBtn=document.getElementById('withdraw');
-                  withdrawBtn.addEventListener('click', function(){
+                  withdrawBtn.addEventListener('click', function(e){
 
-                       const withdrawNumber=getInputNumber("withdrawAmount");
-
-                     if(withdrawNumber < 0){
-                       alert("Withdraw number cannot be Negative");
+                    //    const withdrawNumber=getInputNumber("withdrawAmount");
+                        const withdrawAmount = document.getElementById('withdrawAmount').value;
+                        const withdrawNumber = parseFloat(withdrawAmount);
+                        
+                     if( withdrawNumber < 0 || withdrawAmount === "" ){
+                       alert("Withdraw number cannot be Negative or Empty");
                      }
                      else{
                        updateSpanText('currentWithdraw', withdrawNumber);
@@ -72,7 +75,7 @@
                        document.getElementById('withdrawAmount').value="0";
                      }
                        
-                  })
+                  });
                  
 
 
@@ -122,4 +125,33 @@ createAcct.addEventListener('click', function(){
     
 });
 
+//Store Create Account Data From SignUpDataForm
 
+document.getElementById("accountDataForm").addEventListener("submit", function(){
+    submitData();
+});
+
+function submitData (e){
+    const getInputValue = id => document.getElementById(id).value;
+    const firstName =getInputValue("firstN");
+    const lastName = getInputValue("lastN");
+    const fullName = `${firstName} ${lastName}`;
+    const dateOfBirth = getInputValue("birth-date");
+    const mobileNumber = getInputValue("m-number");
+    const newPassword = getInputValue("n-password");
+    const id = Math.floor(Math.random()*100000000) + '';
+
+    const user = {id, fullName, dateOfBirth, mobileNumber, newPassword};
+
+    let users = [];
+  if (localStorage.getItem('users')){
+    users = JSON.parse(localStorage.getItem('users'));
+  }
+  issues.push(user);
+  localStorage.setItem('users', JSON.stringify(users));
+  document.getElementById('accountDataForm').reset();
+  e.preventDefault();
+  
+  
+}
+console.log(user);
