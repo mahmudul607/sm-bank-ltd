@@ -81,14 +81,14 @@
                <div class="col-md-6">
                     <div class="submit-area">
                          <h4>Deposit</h4>
-                         <input id="depositAmount" type="text" class="form-control" title="$ amount you want to Deposit" value="0">
+                         <input id="depositAmount" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" type="text" class="form-control" title="$ amount you want to Deposit" value="0">
                          <br>
                          <button id="deposit" class="btn btn-success" >Deposit</button></div>
                     </div>
                <div class="col-md-6">
                     <div class="submit-area">
                          <h4>Withdraw</h4>
-                         <input id="withdrawAmount" type="text" class="form-control" title="$ amount you want to withdraw" value="0">
+                         <input id="withdrawAmount" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" type="text" class="form-control" title="$ amount you want to withdraw" value="0">
                          <br>
                          <button id="withdraw" class="btn btn-success" >Withdraw</button>
                          
